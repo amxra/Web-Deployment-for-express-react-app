@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import axios from 'axios'
 import './App.css';
@@ -20,7 +20,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           {
-            data && data[1].name
+            data && data[0].name
           }
         </p>
         <a
