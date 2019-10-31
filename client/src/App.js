@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    axios.get('/api/friends')
+    axios.get((process.env.REACT_APP_API || '') + '/friends')
     .then(res => {
       setData(res.data)
     })
