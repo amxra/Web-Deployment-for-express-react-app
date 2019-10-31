@@ -12,9 +12,6 @@ function App() {
     .then(res => {
       setData(res.data)
     })
-    .catch(error => {
-      error
-    })
   })
 
   return (
@@ -23,7 +20,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           {
-            data && data[0].name
+            data && data[1].name
           }
         </p>
         <a
